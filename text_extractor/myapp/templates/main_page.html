@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title> Text Extractor</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class = "global">  
+  <div class = "row navbar">
+    <h1> Text Extractor</h1>
+    <small class="text-muted"> The Best Online Text Extractor for PDF and Images</small>
+  </div>
+  {% block content %}
+  {% endblock content%}
+</body>
+</html>

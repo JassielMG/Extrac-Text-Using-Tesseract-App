@@ -1,0 +1,30 @@
+{% extends "main_page.html" %}
+
+{% block content %}  
+  
+<div class="row container">
+  <div class = "row">
+    <h2 class="my-4">Upload your File for Text Extraction</h2>
+    <form method="post" enctype="multipart/form-data" action = ''>
+      {% csrf_token %}
+          <input type="file" name="upload_file" accept=".png, .jpeg, .pdf, .jpg" required="required">
+          <br>
+          <button class="btn btn-dark my-4" type="submit">Upload File</button>
+    </form>
+  </div>
+  <!--Display Extracted Text-->
+  <h2 class="my-4">Extracted Text</h2>
+  <div class="row">
+    {% if text %}
+    <div class="col-lg-12 col-md-6 col-sm-12 pb-4">
+      <p> 
+        {{text}}
+      </p>
+    {% else %}
+    <p>Your extracted text will be displayed here.</p>
+    {% endif %}
+  </div>
+
+</div>
+    
+{% endblock %}
